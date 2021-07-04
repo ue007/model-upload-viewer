@@ -1,9 +1,6 @@
 var THREE = require('./libs/three');
 var fs = require('fs');
-var DOMParser = require('xmldom').DOMParser;
-var JSZip = require('./libs/jszip.min');
-var window = { DOMParser: true };
-var TextDecoder = true;
+
 eval(fs.readFileSync('src/libs/lzma.js') + ''); //Original
 eval(fs.readFileSync('src/libs/ctm.js') + ''); //Original
 eval(fs.readFileSync('src/loaders/OBJLoader.js') + ''); //Original
@@ -18,7 +15,7 @@ eval(fs.readFileSync('src/loaders/VTKLoader.js') + ''); //Original
 eval(fs.readFileSync('src/loaders/Custom_XHRLoader.js') + '');
 
 module.exports = {
-  testJS: function (ext, data, method) {
+  load: function (ext, data, method) {
     read(ext, data, method);
   },
 };
