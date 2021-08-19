@@ -1,0 +1,111 @@
+{
+    "asset": {
+        "generator": "Microsoft Simplygon glTF Exporter (Microsoft::glTF)",
+        "version": "2.0"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 2551,
+            "type": "VEC3",
+            "max": [
+                0.06096019223332405,
+                0.1872359812259674,
+                0.05878348648548126
+            ],
+            "min": [
+                -0.09482104331254959,
+                0.03309210017323494,
+                -0.06180020049214363
+            ]
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 2551,
+            "type": "VEC3",
+            "max": [
+                0.9991582632064819,
+                0.9997976422309876,
+                0.9998862147331238
+            ],
+            "min": [
+                -0.9999958276748657,
+                -0.9999896883964539,
+                -0.9995955228805542
+            ]
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5123,
+            "count": 14997,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 30612,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 30612,
+            "byteLength": 30612,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 61224,
+            "byteLength": 29994,
+            "target": 34963
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 91218,
+            "uri": "ReductionOutput_0.bin"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {},
+            "name": "default"
+        }
+    ],
+    "meshes": [
+        {
+            "name": "default",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 0
+                    },
+                    "indices": 2,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "default"
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ],
+            "name": "cascade-scene-0"
+        }
+    ],
+    "scene": 0
+}
