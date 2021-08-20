@@ -22,29 +22,35 @@ def RunReduction(sg: Simplygon.ISimplygon):
     if not sgSceneImporter.RunImport():
         raise Exception("Failed to load ./in/ReductionOutput.fbx.")
     sgScene = sgSceneImporter.GetScene()
-
     # Create the reduction processor.
-    sgReductionProcessor = sg.CreateReductionProcessor()
+    # sgReductionProcessor = sg.CreateReductionProcessor()
 
-    sgReductionProcessor.SetScene(sgScene)
+    # sgReductionProcessor.SetScene(sgScene)
 
-    sgReductionSettings = sgReductionProcessor.GetReductionSettings()
+    # sgReductionSettings = sgReductionProcessor.GetReductionSettings()
 
     # Set reduction target to triangle ratio with a ratio of 50%.
-    sgReductionSettings.SetReductionTargets(
-        Simplygon.EStopCondition_All, True, False, False, False
-    )
-    sgReductionSettings.SetReductionTargetTriangleRatio(1.0)
+    # sgReductionSettings.SetReductionTargets(
+    #     Simplygon.EStopCondition_All, True, False, False, False
+    # )
+    # sgReductionSettings.SetReductionTargetTriangleRatio(1.0)
 
     # Start the reduction process.
-    sgReductionProcessor.RunProcessing()
+    # sgReductionProcessor.RunProcessing()
 
     sgSceneExporter = sg.CreateSceneExporter()
-    sgSceneExporter.SetScene(sgScene)
     # 打印转换后的三角面片数
     print(sgScene.GetTriangleCount())
     sgScene.CreateAABB(False)
-    print(sgScene.GetRadius())
+    # 打印整个场景包围球的半径
+    # print(sgScene.GetRadius())
+    print(sgScene.GetInf())
+    min = sgScene.GetInf()
+    print(sgScene.GetSup())
+    max = sgScene.GetSup()
+    # 打印模型尺寸：长宽高
+    print(max[0] - min[0], max[1] - min[1], max[2] - min[2])
+    sgSceneExporter.SetScene(sgScene)
     sgSceneExporter.SetExportFilePath("./out/convertor/ReductionOutput.gltf")
     if not sgSceneExporter.RunExport():
         raise Exception("Failed to save ReductionOutput.gltf.")
