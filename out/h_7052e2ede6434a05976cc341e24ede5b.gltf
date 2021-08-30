@@ -1,0 +1,107 @@
+{
+    "asset": {
+        "generator": "Microsoft Simplygon glTF Exporter (Microsoft::glTF)",
+        "version": "2.0"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 2601,
+            "type": "VEC3",
+            "max": [5.436925411224365, 10.001093864440918, 5.1697564125061039],
+            "min": [-5.235776424407959, 1.9937727451324463, -5.316987991333008]
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 2601,
+            "type": "VEC3",
+            "max": [0.9998292326927185, 0.9999807476997376, 0.999987781047821],
+            "min": [-0.9998255372047424, -0.6719372272491455, -0.9996280074119568]
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 2601,
+            "type": "VEC2",
+            "max": [1.0, 1.0],
+            "min": [0.0, 0.0]
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5123,
+            "count": 15000,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 31212,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 31212,
+            "byteLength": 31212,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 62424,
+            "byteLength": 20808,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 83232,
+            "byteLength": 30000,
+            "target": 34963
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 113232,
+            "uri": "h_7052e2ede6434a05976cc341e24ede5b_0.bin"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 1.0]
+            },
+            "name": "lambert1"
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 0,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "pPlane1"
+        }
+    ],
+    "samplers": [{}],
+    "scenes": [
+        {
+            "nodes": [0],
+            "name": "cascade-scene-0"
+        }
+    ],
+    "scene": 0
+}

@@ -38,19 +38,35 @@ def RunReduction(sg: Simplygon.ISimplygon):
     # Start the reduction process.
     # sgReductionProcessor.RunProcessing()
 
-    sgSceneExporter = sg.CreateSceneExporter()
+    # 转换单位开始
+    transform = sg.CreateTransform3()
+    transform.AddScaling(1000, 1000, 1000)
+    matrix = transform.GetMatrix()
+    geom = sgScene.NewCombinedGeometry()
+    geom.Transform(matrix)
+    print(geom.GetTriangleCount())
+
+    sgScene2 = sg.CreateScene()
+    sgSceneMesh2 = sg.CreateSceneMesh()
+    sgSceneMesh2.SetGeometry(geom)
+
+    sgScene2.GetRootNode().AddChild(sgSceneMesh2)
+    # 转换单位结束
+
     # 打印转换后的三角面片数
-    print(sgScene.GetTriangleCount())
-    sgScene.CreateAABB(False)
+    print(sgScene2.GetTriangleCount())
+    sgScene2.CreateAABB(False)
     # 打印整个场景包围球的半径
-    # print(sgScene.GetRadius())
-    print(sgScene.GetInf())
-    min = sgScene.GetInf()
-    print(sgScene.GetSup())
-    max = sgScene.GetSup()
+    # print(sgScene2.GetRadius())
+    print(sgScene2.GetInf())
+    min = sgScene2.GetInf()
+    print(sgScene2.GetSup())
+    max = sgScene2.GetSup()
     # 打印模型尺寸：长宽高
     print(max[0] - min[0], max[1] - min[1], max[2] - min[2])
-    sgSceneExporter.SetScene(sgScene)
+
+    sgSceneExporter = sg.CreateSceneExporter()
+    sgSceneExporter.SetScene(sgScene2)
     sgSceneExporter.SetExportFilePath("./out/convertor/ReductionOutput.gltf")
     if not sgSceneExporter.RunExport():
         raise Exception("Failed to save ReductionOutput.gltf.")
