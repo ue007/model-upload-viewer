@@ -1,0 +1,130 @@
+{
+    "asset": {
+        "generator": "Microsoft Simplygon glTF Exporter (Microsoft::glTF)",
+        "version": "2.0"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 374076,
+            "type": "VEC3",
+            "max": [
+                3000.0,
+                1900.0,
+                -12.256824493408204
+            ],
+            "min": [
+                0.00006735554052283987,
+                4.37669910979821e-7,
+                -299.999755859375
+            ]
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 374076,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 374076,
+            "type": "VEC2",
+            "max": [
+                1531469.875,
+                1531470.875
+            ],
+            "min": [
+                -1531469.875,
+                -247841.4375
+            ]
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5125,
+            "count": 992310,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 4488912,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 4488912,
+            "byteLength": 4488912,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 8977824,
+            "byteLength": 2992608,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 11970432,
+            "byteLength": 3969240,
+            "target": 34963
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 15939672,
+            "uri": "1111_binary_glTF.bin"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {},
+            "name": "material-0"
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 0,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ],
+            "name": "cascade-scene-0"
+        }
+    ],
+    "scene": 0
+}

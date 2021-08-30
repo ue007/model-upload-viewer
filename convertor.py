@@ -38,7 +38,7 @@ def RunReduction(sg: Simplygon.ISimplygon):
     # Start the reduction process.
     # sgReductionProcessor.RunProcessing()
 
-    # 转换单位开始
+    # 转换单位开始 
     transform = sg.CreateTransform3()
     transform.AddScaling(1000, 1000, 1000)
     matrix = transform.GetMatrix()
